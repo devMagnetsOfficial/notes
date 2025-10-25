@@ -714,6 +714,15 @@ while fetching data we use  const data = await response.json(); to transform jso
             }
         })
 ```
+# ejs
+```
+const ejs=require('ejs')
+app.set('view engine','ejs')
+app.set('views','./view')
+app.get('/mailtemplate',(req,res)=>{
+res.render('mailTemplate')
+})
+```
 #  Example-Mail With Logic Backend
 - we use <%= x %> to change its variable i.e x, according to request
 - we use ejsrenderFile to get html as template to use any where
